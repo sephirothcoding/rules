@@ -49,15 +49,15 @@
 
         .accordion__item__head {
             padding: 1rem;
+            position: relative;
+            cursor: pointer;
         }
 
-        .accordion__item__head {
-            background: #8e43e7;
-            color: #EEE;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .accordion__arrow {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
         }
 
         .accordion__item__head h2 {
@@ -101,7 +101,7 @@
             <li class="accordion__item"><!-- Accordion 1 -->
                 <div class="accordion__item__head">
                     <h2>Anime</h2>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down accordion__arrow"></i>
                 </div>
                 <div class="accordion__item__body">
                     <p>
@@ -116,7 +116,7 @@
             <li class="accordion__item open"><!-- Accordion 2 -->
                 <div class="accordion__item__head">
                     <h2>Games</h2>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down accordion__arrow"></i>
                 </div>
                 <div class="accordion__item__body">
                     <img
@@ -133,7 +133,7 @@
             <li class="accordion__item"> <!-- Accordion 4 -->
                 <div class="accordion__item__head">
                     <h2>Films</h2>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down accordion__arrow"></i>
                 </div>
                 <div class="accordion__item__body">
                     <p>
@@ -146,7 +146,7 @@
             <li class="accordion__item"><!-- Accordion 4 -->
                 <div class="accordion__item__head">
                     <h2>Art</h2>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down accordion__arrow"></i>
                 </div>
                 <div class="accordion__item__body">
                     <p>
