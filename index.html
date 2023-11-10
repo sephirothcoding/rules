@@ -64,9 +64,10 @@
             position: relative;
         }
 
-        .accordion__item__head h2 {
-            text-transform: uppercase;
-            font-size: 1.3rem;
+        .accordion__item__head h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #049B64; /* Updated color */
         }
 
         .accordion__item__head .arrow-icon {
@@ -128,12 +129,13 @@
         /* New Menu Styles */
         .menu {
             display: flex;
-            justify-content: space-around; /* Updated property */
+            justify-content: space-between; /* Updated property */
             background-color: #049B64;
             padding: 1rem;
             color: #FFF;
             width: 100%;
             box-sizing: border-box;
+            margin-bottom: 2rem; /* Added margin */
         }
 
         .menu a {
@@ -145,13 +147,6 @@
         .menu a:hover {
             text-decoration: underline;
         }
-
-        /* New Title Style */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #049B64; /* Updated color */
-        }
     </style>
 </head>
 
@@ -161,8 +156,8 @@
 
     <!-- New Menu -->
     <div class="menu">
-        <a href="#purple-content">RULES</a>
-        <a href="#boxes">STAFF</a>
+        <a href="#purple-content">Purple Content</a>
+        <a href="#boxes">Boxes</a>
     </div>
 
     <div class="container__accordion">
