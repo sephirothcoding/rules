@@ -78,12 +78,25 @@ img {
   font-size: .9rem;
   line-height: 1.3;
 }
+
+	
 </style>
   <script src='code.js' ></script>
   </head>
   <body>
 
+<script> 
+	const accordion_items_elms = document.querySelectorAll('.accordion .accordion__item');
 
+accordion_items_elms.forEach(accordionItem => {
+
+  accordionItem.querySelector('.accordion__item__head').addEventListener('click', (e) => {
+    accordionItem.classList.toggle('open');
+  });
+
+});
+</script>
+	  
 <div class="container__accordion">
   <ul class="accordion">
     <li class="accordion__item"><!-- Accordion 1 -->
