@@ -66,22 +66,18 @@
             font-size: 1.3rem;
         }
 
-        .accordion__item__head i {
-            transition: transform .3s linear;
-        }
-
-        .accordion__item.open .accordion__item__head i {
-            transform: rotate(-180deg)
-        }
-
         .accordion__item__head .arrow-icon {
             content: '';
             width: 10px;
             height: 10px;
             border-left: 2px solid #FFF;
             border-bottom: 2px solid #FFF;
-            transform: rotate(-45deg);
-            margin-right: 8px;
+            transform: rotate(45deg);
+            margin-left: 8px;
+        }
+
+        .accordion__item.open .accordion__item__head i {
+            transform: rotate(-180deg);
         }
 
         .accordion__item__body {
@@ -112,8 +108,8 @@
             <!-- Accordion 1 -->
             <li class="accordion__item">
                 <div class="accordion__item__head">
-                    <span class="arrow-icon"></span>
                     <h2>Anime</h2>
+                    <span class="arrow-icon"></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="accordion__item__body">
@@ -129,8 +125,8 @@
             <!-- Accordion 2 -->
             <li class="accordion__item open">
                 <div class="accordion__item__head">
-                    <span class="arrow-icon"></span>
                     <h2>Games</h2>
+                    <span class="arrow-icon"></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="accordion__item__body">
@@ -148,8 +144,8 @@
             <!-- Accordion 3 -->
             <li class="accordion__item">
                 <div class="accordion__item__head">
-                    <span class="arrow-icon"></span>
                     <h2>Films</h2>
+                    <span class="arrow-icon"></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="accordion__item__body">
@@ -163,8 +159,8 @@
             <!-- Accordion 4 -->
             <li class="accordion__item">
                 <div class="accordion__item__head">
-                    <span class="arrow-icon"></span>
                     <h2>Art</h2>
+                    <span class="arrow-icon"></span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="accordion__item__body">
