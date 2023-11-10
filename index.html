@@ -1,165 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style> 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
-}
-img {
-  max-width: 100%
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container__accordion {
-  max-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem .5rem;
-}
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 13px;
+        }
 
-.accordion {
-  list-style: none;
-  max-width: 550px;
-  width: 90%;
-}
-.accordion__item {
-  margin-bottom: .8rem;
-  border: 1px solid #F2F2F2;
-  transition: all .2s linear;
-}
-.accordion__item.open {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-}
-.accordion__item__head {
-  padding: 1rem;
-}
+        img {
+            max-width: 100%
+        }
 
-.accordion__item__head {
-  background: #8e43e7;
-  color: #EEE;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.accordion__item__head h2 {
-  text-transform: uppercase;
-  font-size: 1.3rem;
-}
-.accordion__item__head i {
-  transition: transform .3s linear;
-}
-.accordion__item.open .accordion__item__head i {
-  transform: rotate(-180deg)
-}
+        .container__accordion {
+            max-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem .5rem;
+        }
 
-.accordion__item__body {
-  overflow: hidden;
-  height: 0;
-  border-left: 3px solid #8e43e7;
-}
-.accordion__item.open .accordion__item__body {
-  padding: 1rem;
-  height: auto;
-}
-.accordion__item__body > *:not(:first-child) {
-  margin-top: .8rem;
-}
-.accordion__item__body p {
-  font-size: .9rem;
-  line-height: 1.3;
-}
+        .accordion {
+            list-style: none;
+            max-width: 550px;
+            width: 90%;
+        }
 
-	
-</style>
-<script> 
-	const accordion_items_elms = document.querySelectorAll('.accordion .accordion__item');
+        .accordion__item {
+            margin-bottom: .8rem;
+            border: 1px solid #F2F2F2;
+            transition: all .2s linear;
+        }
 
-accordion_items_elms.forEach(accordionItem => {
+        .accordion__item.open {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+        }
 
-  accordionItem.querySelector('.accordion__item__head').addEventListener('click', (e) => {
-    accordionItem.classList.toggle('open');
-  });
+        .accordion__item__head {
+            padding: 1rem;
+        }
 
-});
-</script>	
-  <script src='code.js' ></script>
-  </head>
-  <body>
+        .accordion__item__head {
+            background: #8e43e7;
+            color: #EEE;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
+        .accordion__item__head h2 {
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
 
-	  
-<div class="container__accordion">
-  <ul class="accordion">
-    <li class="accordion__item"><!-- Accordion 1 -->
-      <div class="accordion__item__head">
-        <h2>Anime</h2>
-			  <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="accordion__item__body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <img src="https://c4.wallpaperflare.com/wallpaper/616/710/558/anime-dual-monitor-multi-wallpaper-preview.jpg" alt="">
-      </div>
-    </li>
-    <li class="accordion__item open"><!-- Accordion 2 -->
-      <div class="accordion__item__head">
-        <h2>Games</h2>
-		    <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="accordion__item__body">
-        <img src="https://c4.wallpaperflare.com/wallpaper/67/241/223/assassin-s-creed-valhalla-video-games-video-game-art-digital-art-viking-hd-wallpaper-preview.jpg" alt="">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      consequat.
-        </p>
-      </div>
-    </li>
-      <li class="accordion__item"> <!-- Accordion 4 -->
-      <div class="accordion__item__head">
-        <h2>Films</h2>
-		    <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="accordion__item__body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
-        </p>
-      </div>
-    </li>
-    <li class="accordion__item"><!-- Accordion 4 -->
-      <div class="accordion__item__head">
-        <h2>Art</h2>
-		    <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="accordion__item__body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
-        </p>
-        <img src="https://c4.wallpaperflare.com/wallpaper/125/1018/551/fantasy-art-drawing-nature-psychedelic-wallpaper-preview.jpg" alt="">
-      </div>
-    </li>
-  </ul>
-</div>
+        .accordion__item__head i {
+            transition: transform .3s linear;
+        }
 
-	     </body>
+        .accordion__item.open .accordion__item__head i {
+            transform: rotate(-180deg)
+        }
+
+        .accordion__item__body {
+            overflow: hidden;
+            height: 0;
+            border-left: 3px solid #8e43e7;
+        }
+
+        .accordion__item.open .accordion__item__body {
+            padding: 1rem;
+            height: auto;
+        }
+
+        .accordion__item__body>*:not(:first-child) {
+            margin-top: .8rem;
+        }
+
+        .accordion__item__body p {
+            font-size: .9rem;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container__accordion">
+        <ul class="accordion">
+            <li class="accordion__item"><!-- Accordion 1 -->
+                <div class="accordion__item__head">
+                    <h2>Anime</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion__item__body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <img src="https://c4.wallpaperflare.com/wallpaper/616/710/558/anime-dual-monitor-multi-wallpaper-preview.jpg"
+                        alt="">
+                </div>
+            </li>
+            <li class="accordion__item open"><!-- Accordion 2 -->
+                <div class="accordion__item__head">
+                    <h2>Games</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion__item__body">
+                    <img
+                        src="https://c4.wallpaperflare.com/wallpaper/67/241/223/assassin-s-creed-valhalla-video-games-video-game-art-digital-art-viking-hd-wallpaper-preview.jpg"
+                        alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </li>
+            <li class="accordion__item"> <!-- Accordion 4 -->
+                <div class="accordion__item__head">
+                    <h2>Films</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion__item__body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </li>
+            <li class="accordion__item"><!-- Accordion 4 -->
+                <div class="accordion__item__head">
+                    <h2>Art</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion__item__body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <img
+                        src="https://c4.wallpaperflare.com/wallpaper/125/1018/551/fantasy-art-drawing-nature-psychedelic-wallpaper-preview.jpg"
+                        alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const accordion_items_elms = document.querySelectorAll('.accordion .accordion__item');
+
+        accordion_items_elms.forEach(accordionItem => {
+            accordionItem.querySelector('.accordion__item__head').addEventListener('click', (e) => {
+                accordionItem.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
 </html>
